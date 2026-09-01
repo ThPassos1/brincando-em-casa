@@ -15,6 +15,24 @@ const links = [
   { href: '#matriculas', label: 'Matrículas' },
 ] as const
 
+function InstagramMark({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" className={className} aria-hidden="true" fill="none">
+      <rect
+        x="3.4"
+        y="3.4"
+        width="17.2"
+        height="17.2"
+        rx="5"
+        stroke="currentColor"
+        strokeWidth="1.8"
+      />
+      <circle cx="12" cy="12" r="3.7" stroke="currentColor" strokeWidth="1.8" />
+      <circle cx="17.15" cy="6.85" r="1" fill="currentColor" />
+    </svg>
+  )
+}
+
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [open, setOpen] = useState(false)
@@ -73,7 +91,18 @@ export function Navbar() {
         </ul>
 
         <div className="flex items-center gap-2">
-          <span className="hidden md:inline-flex xl:hidden">
+          <span className="hidden items-center gap-2 md:inline-flex xl:hidden">
+            <Button
+              href={SITE.instagram}
+              variant="secondary"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Abrir o Instagram da Brincando em Casa"
+              className="px-3.5 py-2.5 text-sm"
+            >
+              <InstagramMark className="h-4 w-4" />
+              Instagram
+            </Button>
             <Button
               href={whatsappUrl('float')}
               target="_blank"
@@ -83,7 +112,17 @@ export function Navbar() {
               WhatsApp
             </Button>
           </span>
-          <span className="hidden xl:inline-flex">
+          <span className="hidden items-center gap-2 xl:inline-flex">
+            <Button
+              href={SITE.instagram}
+              variant="secondary"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Abrir o Instagram da Brincando em Casa"
+            >
+              <InstagramMark className="h-4.5 w-4.5" />
+              Instagram
+            </Button>
             <Button
               href={whatsappUrl('float')}
               target="_blank"
@@ -142,7 +181,18 @@ export function Navbar() {
                   </a>
                 </li>
               ))}
-              <li className="pt-2">
+              <li className="flex flex-col gap-2 pt-2">
+                <Button
+                  href={SITE.instagram}
+                  variant="secondary"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Abrir o Instagram da Brincando em Casa"
+                  className="w-full"
+                >
+                  <InstagramMark className="h-4.5 w-4.5" />
+                  Instagram
+                </Button>
                 <Button
                   href={whatsappUrl('float')}
                   target="_blank"
