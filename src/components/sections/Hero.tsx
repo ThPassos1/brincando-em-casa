@@ -27,7 +27,7 @@ export function Hero() {
       <motion.div
         aria-hidden
         style={reduce ? undefined : { y: sunY }}
-        className="pointer-events-none absolute top-20 right-2 z-20 text-brincando-laranja sm:top-24 sm:right-12"
+        className="pointer-events-none absolute top-24 right-10 z-10 hidden text-brincando-laranja sm:block sm:top-24 sm:right-12"
       >
         <SunSketch className="h-14 w-14 drop-shadow-sm sm:h-28 sm:w-28" />
       </motion.div>
@@ -43,7 +43,7 @@ export function Hero() {
         className="pointer-events-none absolute top-28 left-1/3 z-20 hidden h-10 w-24 text-brincando-creme/80 sm:block"
       />
 
-      <div className="relative z-20 container-page pb-[max(4.5rem,calc(env(safe-area-inset-bottom)+3.5rem))] sm:pb-20">
+      <div className="relative z-20 container-page pb-[max(5.75rem,calc(env(safe-area-inset-bottom)+4.75rem))] sm:pb-20">
         <motion.div
           initial={reduce ? false : { opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -78,10 +78,10 @@ export function Hero() {
               Conhecer a proposta
             </Button>
           </div>
-          <p className="mt-5 font-hand text-lg font-semibold text-brincando-terra-escuro [text-shadow:0_2px_16px_var(--brincando-creme),0_0_36px_var(--brincando-creme)] sm:text-xl">
+          <p className="mt-5 hidden font-hand text-lg font-semibold text-brincando-terra-escuro [text-shadow:0_2px_16px_var(--brincando-creme),0_0_36px_var(--brincando-creme)] sm:block sm:text-xl">
             🌿 Práticas inspiradas na Pedagogia Waldorf
           </p>
-          <p className="mt-1 max-w-md text-sm font-semibold break-words text-brincando-terra-escuro [text-shadow:0_2px_16px_var(--brincando-creme),0_0_36px_var(--brincando-creme)]">
+          <p className="mt-1 hidden max-w-md text-sm font-semibold break-words text-brincando-terra-escuro [text-shadow:0_2px_16px_var(--brincando-creme),0_0_36px_var(--brincando-creme)] sm:block">
             {SITE.address.line}
           </p>
         </motion.div>

@@ -106,7 +106,7 @@ export function Espaco() {
                 rel="noopener noreferrer"
                 className="w-full sm:w-auto"
               >
-                Como chegar
+                WhatsApp
               </Button>
               <Button
                 href={mapsDirectionsUrl()}

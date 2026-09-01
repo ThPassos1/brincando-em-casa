@@ -61,7 +61,7 @@ export function HeroCarousel() {
       <div className="absolute inset-x-0 top-0 h-20 bg-linear-to-b from-brincando-creme/55 to-transparent" aria-hidden />
       <div className="absolute inset-x-0 bottom-0 h-24 bg-linear-to-t from-brincando-creme to-transparent" aria-hidden />
 
-      <div className="absolute bottom-5 left-1/2 z-10 flex -translate-x-1/2 gap-1 sm:bottom-6 sm:gap-2">
+      <div className="absolute top-[42%] left-1/2 z-10 flex -translate-x-1/2 gap-1 sm:top-auto sm:bottom-6 sm:gap-2">
         {slides.map((slide, i) => (
           <button
             key={slide.src}

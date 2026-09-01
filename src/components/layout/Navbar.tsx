@@ -67,7 +67,7 @@ export function Navbar() {
       >
         <a href="#inicio" className="flex min-w-0 items-center gap-2 text-brincando-preto sm:gap-2.5">
           <BrandLogo className="h-10 shrink-0 sm:h-12" />
-          <span className="hidden min-w-0 leading-tight min-[380px]:block">
+          <span className="hidden min-w-0 leading-tight sm:block">
             <span className="block truncate font-display text-[1.05rem] font-bold sm:text-[1.1rem]">
               {SITE.shortName}
             </span>
@@ -169,37 +169,37 @@ export function Navbar() {
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.3 }}
           >
-            <ul className="container-page flex flex-col gap-1 py-4">
+            <ul className="container-page flex flex-col gap-0.5 py-3">
               {links.map((link) => (
                 <li key={link.href}>
                   <a
                     href={link.href}
                     onClick={() => setOpen(false)}
-                    className="block py-3 font-display text-xl text-brincando-preto"
+                    className="block py-2.5 font-display text-[1.2rem] text-brincando-preto"
                   >
                     {link.label}
                   </a>
                 </li>
               ))}
-              <li className="flex flex-col gap-2 pt-2">
+              <li className="grid grid-cols-2 gap-2 pt-3">
                 <Button
                   href={SITE.instagram}
                   variant="secondary"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Abrir o Instagram da Brincando em Casa"
-                  className="w-full"
+                  className="w-full bg-brincando-creme px-3 text-sm"
                 >
-                  <InstagramMark className="h-4.5 w-4.5" />
+                  <InstagramMark className="h-4 w-4 shrink-0" />
                   Instagram
                 </Button>
                 <Button
                   href={whatsappUrl('float')}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="pulse-heart w-full"
+                  className="pulse-heart w-full px-3 text-sm"
                 >
-                  Falar no WhatsApp
+                  WhatsApp
                 </Button>
               </li>
             </ul>
