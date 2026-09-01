@@ -20,7 +20,7 @@ export function Hero() {
     <section
       ref={ref}
       id="inicio"
-      className="relative flex min-h-[100svh] flex-col justify-center overflow-hidden pt-[calc(4.4rem+env(safe-area-inset-top))] sm:min-h-svh sm:justify-end"
+      className="relative flex min-h-[100svh] flex-col overflow-hidden pt-[calc(4.4rem+env(safe-area-inset-top))] sm:min-h-svh sm:justify-end"
     >
       <HeroCarousel />
 
@@ -43,7 +43,7 @@ export function Hero() {
         className="pointer-events-none absolute top-28 left-1/3 z-20 hidden h-10 w-24 text-brincando-creme/80 sm:block"
       />
 
-      <div className="relative z-20 container-page pb-[max(5.25rem,calc(env(safe-area-inset-bottom)+4.25rem))] sm:pb-20">
+      <div className="relative z-20 container-page pb-[max(5.25rem,calc(env(safe-area-inset-bottom)+4.25rem))] pt-[8.5rem] sm:pt-0 sm:pb-20">
         <motion.div
           initial={reduce ? false : { opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -53,7 +53,7 @@ export function Hero() {
           <h1 className="text-[2.15rem] leading-[1.15] text-brincando-terra-escuro [text-shadow:0_2px_16px_var(--brincando-creme),0_0_36px_var(--brincando-creme)] sm:text-5xl lg:text-[3.4rem]">
             Um lugar onde a infância tem tempo para acontecer
           </h1>
-          <p className="mt-8 max-w-[20.5rem] rounded-[1.2rem_1.5rem_1.1rem_1.6rem] bg-brincando-creme/72 px-3.5 py-3 text-[0.9rem] leading-relaxed font-semibold text-brincando-terra-escuro sm:mt-5 sm:max-w-xl sm:bg-brincando-creme/55 sm:px-5 sm:py-3.5 sm:text-lg">
+          <p className="mt-12 max-w-[20.5rem] rounded-[1.2rem_1.5rem_1.1rem_1.6rem] bg-brincando-creme/72 px-3.5 py-3 text-[0.9rem] leading-relaxed font-semibold text-brincando-terra-escuro sm:mt-5 sm:max-w-xl sm:bg-brincando-creme/55 sm:px-5 sm:py-3.5 sm:text-lg">
             Espaço Educativo em Manaus com práticas inspiradas na{' '}
             <span className="font-bold text-brincando-laranja">
               Pedagogia Waldorf
@@ -61,7 +61,7 @@ export function Hero() {
             . Onde brincar, criar e descobrir o mundo são, antes de tudo,
             coisas sérias.
           </p>
-          <div className="mt-16 flex flex-row flex-wrap items-center justify-center gap-2.5 sm:mt-8 sm:justify-start sm:gap-3">
+          <div className="mt-32 flex flex-row flex-wrap items-center justify-center gap-2.5 sm:mt-8 sm:justify-start sm:gap-3">
             <Button
               href={whatsappUrl('hero')}
               target="_blank"
