@@ -50,7 +50,7 @@ export function Hero() {
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           className="mx-auto flex max-w-2xl flex-col items-center text-center sm:mx-0 sm:items-start sm:text-left"
         >
-          <h1 className="text-[2.15rem] leading-[1.15] text-brincando-terra-escuro [text-shadow:0_2px_16px_var(--brincando-creme),0_0_36px_var(--brincando-creme)] sm:text-5xl lg:text-[3.4rem]">
+          <h1 className="text-[2.15rem] leading-[1.15] text-brincando-laranja [text-shadow:0_2px_16px_var(--brincando-creme),0_0_36px_var(--brincando-creme)] sm:text-5xl lg:text-[3.4rem]">
             Um lugar onde a infância tem tempo para acontecer
           </h1>
           <p className="mt-12 max-w-[20.5rem] rounded-[1.2rem_1.5rem_1.1rem_1.6rem] bg-brincando-creme/72 px-3.5 py-3 text-[0.9rem] leading-relaxed font-semibold text-brincando-terra-escuro sm:mt-5 sm:max-w-xl sm:bg-brincando-creme/55 sm:px-5 sm:py-3.5 sm:text-lg">
