@@ -176,6 +176,45 @@ export function TwigSketch({ className, ...props }: IconProps) {
   )
 }
 
+export function SpiralSketch({ className, ...props }: IconProps) {
+  return (
+    <svg viewBox="0 0 64 64" className={className} aria-hidden="true" {...props}>
+      <path
+        {...stroke}
+        strokeWidth={1.7}
+        d="M40.8 33.2c-.4 6.4-5.6 11-12 10.6-6.6-.4-11-6-10.4-12.4.6-6.2 6.2-10.4 12.2-9.6 4.8.6 8.2 4.8 7.6 9.4-.4 3.4-3.2 5.8-6.4 5.4-2.6-.4-4.4-2.8-4-5.2"
+      />
+    </svg>
+  )
+}
+
+export function DropSketch({ className, ...props }: IconProps) {
+  return (
+    <svg viewBox="0 0 48 64" className={className} aria-hidden="true" {...props}>
+      <path
+        {...stroke}
+        strokeWidth={1.8}
+        d="M24 10.5C24 10.5 10.8 28.4 10.8 40.2c0 7.6 5.8 13.3 13.2 13.3s13.2-5.7 13.2-13.3C37.2 28.4 24 10.5 24 10.5z"
+      />
+      <path {...stroke} strokeWidth={1.3} opacity={0.7} d="M18.6 38.4c.8 4.2 3.8 7 7.6 7.6" />
+    </svg>
+  )
+}
+
+export function MushroomSketch({ className, ...props }: IconProps) {
+  return (
+    <svg viewBox="0 0 64 64" className={className} aria-hidden="true" {...props}>
+      <path
+        {...stroke}
+        strokeWidth={1.8}
+        d="M12.4 32.6c1.2-12.4 10.8-20.6 19.8-20.6 9.2 0 18.4 8 19.4 20.6H12.4z"
+      />
+      <path {...stroke} d="M26.2 32.6V50c0 1.4 1.2 2.6 2.6 2.6h6.4c1.4 0 2.6-1.2 2.6-2.6V32.6" />
+      <path {...stroke} strokeWidth={1.3} d="M20.4 24.8c1.6-1 3.6-.8 4.8.6M38.6 22.4c1.2 1.4 3.2 1.8 4.8.8" />
+    </svg>
+  )
+}
+
 function BrincarLivreIcon({ className, ...props }: IconProps) {
   return (
     <svg viewBox="0 0 64 64" className={className} aria-hidden="true" {...props}>
@@ -295,6 +334,9 @@ export const illustratedIcons = {
   flor: FlowerSketch,
   abelha: BeeSketch,
   galho: TwigSketch,
+  caracol: SpiralSketch,
+  gota: DropSketch,
+  cogumelo: MushroomSketch,
 } as const
 
 export type IllustratedIconName = keyof typeof illustratedIcons

@@ -2,10 +2,13 @@ import {
   BeeSketch,
   BirdSketch,
   CloudSketch,
+  DropSketch,
   FlowerSketch,
   HouseSketch,
   LeafSketch,
   MoonSketch,
+  MushroomSketch,
+  SpiralSketch,
   StarSketch,
   SunSketch,
   TwigSketch,
@@ -23,6 +26,9 @@ const catalog = {
   flor: FlowerSketch,
   abelha: BeeSketch,
   galho: TwigSketch,
+  caracol: SpiralSketch,
+  gota: DropSketch,
+  cogumelo: MushroomSketch,
 } as const
 
 export type DoodleName = keyof typeof catalog
@@ -40,5 +46,19 @@ export function Doodle({
       aria-hidden
       className={cn('pointer-events-none absolute select-none', className)}
     />
+  )
+}
+
+export function DoodleField({
+  items,
+}: {
+  items: Array<{ name: DoodleName; className: string }>
+}) {
+  return (
+    <>
+      {items.map((item, index) => (
+        <Doodle key={`${item.name}-${index}`} name={item.name} className={item.className} />
+      ))}
+    </>
   )
 }

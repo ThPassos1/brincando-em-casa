@@ -1,6 +1,7 @@
 import { motion, useReducedMotion, useScroll, useTransform } from 'framer-motion'
 import { useRef } from 'react'
 import { CloudSketch, LeafSketch, SunSketch } from '@/assets/illustrations'
+import { Doodle } from '@/components/ui/Doodle'
 import { Button } from '@/components/ui/Button'
 import { HeroCarousel } from '@/components/ui/HeroCarousel'
 import { SITE } from '@/lib/site'
@@ -42,6 +43,8 @@ export function Hero() {
         aria-hidden
         className="pointer-events-none absolute top-[8.75rem] left-4 z-10 h-7 w-16 text-brincando-creme/70 sm:top-28 sm:left-1/3 sm:h-10 sm:w-24 sm:text-brincando-creme/80"
       />
+      <Doodle name="estrela" className="top-[11.5rem] left-1/2 z-10 h-7 w-7 -translate-x-8 text-brincando-laranja/55 sm:top-36 sm:left-[42%] sm:h-10 sm:w-10" />
+      <Doodle name="flor" className="right-4 bottom-36 z-10 h-10 w-9 text-brincando-rosa/70 sm:right-16 sm:bottom-28 sm:h-14 sm:w-12" />
 
       <div className="relative z-20 container-page pb-[max(5.25rem,calc(env(safe-area-inset-bottom)+4.25rem))] pt-[8.5rem] sm:pt-0 sm:pb-20">
         <motion.div

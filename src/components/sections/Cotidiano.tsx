@@ -1,5 +1,5 @@
 import type { IllustratedIconName } from '@/assets/illustrations'
-import { Doodle } from '@/components/ui/Doodle'
+import { DoodleField } from '@/components/ui/Doodle'
 import { IllustratedIcon } from '@/components/ui/IllustratedIcon'
 import { SectionReveal } from '@/components/ui/SectionReveal'
 
@@ -38,8 +38,15 @@ const momentos: Array<{
 export function Cotidiano() {
   return (
     <section id="cotidiano" className="cv-auto relative overflow-hidden bg-brincando-creme py-20 sm:py-24">
-      <Doodle name="abelha" className="top-7 right-4 h-8 w-11 text-brincando-laranja/40 sm:top-12 sm:right-16 sm:h-11 sm:w-14" />
-      <Doodle name="galho" className="bottom-8 left-1 h-10 w-14 text-brincando-salvia/40 sm:bottom-10 sm:left-8 sm:h-14 sm:w-20" />
+      <DoodleField
+        items={[
+          { name: 'abelha', className: 'top-7 right-4 h-8 w-11 text-brincando-laranja/40 sm:top-12 sm:right-16 sm:h-11 sm:w-14' },
+          { name: 'galho', className: 'bottom-8 left-1 h-10 w-14 text-brincando-salvia/40 sm:bottom-10 sm:left-8 sm:h-14 sm:w-20' },
+          { name: 'nuvem', className: 'top-10 left-3 h-7 w-14 text-brincando-terra/20 sm:top-16 sm:left-12 sm:h-9 sm:w-16' },
+          { name: 'estrela', className: 'left-3 top-1/2 h-8 w-8 text-brincando-laranja/30 sm:left-8 sm:h-10 sm:w-10' },
+          { name: 'flor', className: 'right-2 bottom-20 h-10 w-9 text-brincando-rosa/45 sm:right-10 sm:bottom-16 sm:h-14 sm:w-12' },
+        ]}
+      />
       <div className="container-page">
         <SectionReveal className="mx-auto max-w-2xl text-center">
           <p className="font-hand text-2xl text-brincando-laranja">Cotidiano</p>

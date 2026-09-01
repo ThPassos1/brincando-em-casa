@@ -1,4 +1,4 @@
-import { Doodle } from '@/components/ui/Doodle'
+import { DoodleField } from '@/components/ui/Doodle'
 import { IllustratedIcon } from '@/components/ui/IllustratedIcon'
 import { SectionReveal } from '@/components/ui/SectionReveal'
 import { WaveDivider } from '@/components/ui/WaveDivider'
@@ -18,8 +18,15 @@ export function Diferenciais() {
       id="diferenciais"
       className="cv-auto relative overflow-hidden bg-brincando-salvia-clara/60 py-20 sm:py-24"
     >
-      <Doodle name="casa" className="top-10 right-3 h-10 w-10 text-brincando-terra/25 sm:top-16 sm:right-12 sm:h-14 sm:w-14" />
-      <Doodle name="folha" className="bottom-5 left-2 h-12 w-9 text-brincando-salvia sm:bottom-8 sm:left-8 sm:h-16 sm:w-12" />
+      <DoodleField
+        items={[
+          { name: 'casa', className: 'top-10 right-3 h-10 w-10 text-brincando-terra/25 sm:top-16 sm:right-12 sm:h-14 sm:w-14' },
+          { name: 'folha', className: 'bottom-5 left-2 h-12 w-9 text-brincando-salvia sm:bottom-8 sm:left-8 sm:h-16 sm:w-12' },
+          { name: 'passarinho', className: 'top-8 left-3 h-8 w-11 text-brincando-terra/25 sm:top-14 sm:left-10 sm:h-11 sm:w-14' },
+          { name: 'cogumelo', className: 'right-2 top-[48%] h-9 w-9 text-brincando-terra/20 sm:right-8 sm:h-12 sm:w-12' },
+          { name: 'estrela', className: 'right-6 bottom-8 h-8 w-8 text-brincando-laranja/35 sm:right-16 sm:bottom-12 sm:h-11 sm:w-11' },
+        ]}
+      />
       <WaveDivider
         fill="var(--brincando-creme)"
         flip

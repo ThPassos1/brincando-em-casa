@@ -1,6 +1,6 @@
 import { motion, useReducedMotion } from 'framer-motion'
 import type { IllustratedIconName } from '@/assets/illustrations'
-import { Doodle } from '@/components/ui/Doodle'
+import { DoodleField } from '@/components/ui/Doodle'
 import { IllustratedIcon } from '@/components/ui/IllustratedIcon'
 import { SectionReveal } from '@/components/ui/SectionReveal'
 import { fadeUp, stagger, viewportOnce } from '@/lib/motion'
@@ -128,8 +128,15 @@ export function Proposta() {
 
   return (
     <section id="proposta" className="cv-auto relative overflow-hidden bg-brincando-creme py-20 sm:py-24">
-      <Doodle name="estrela" className="top-6 right-3 h-10 w-10 text-brincando-laranja/45 sm:top-10 sm:right-10 sm:h-14 sm:w-14" />
-      <Doodle name="lua" className="bottom-8 left-2 h-11 w-11 text-brincando-terra/25 sm:bottom-12 sm:left-8 sm:h-16 sm:w-16" />
+      <DoodleField
+        items={[
+          { name: 'estrela', className: 'top-6 right-3 h-10 w-10 text-brincando-laranja/45 sm:top-10 sm:right-10 sm:h-14 sm:w-14' },
+          { name: 'lua', className: 'bottom-8 left-2 h-11 w-11 text-brincando-terra/25 sm:bottom-12 sm:left-8 sm:h-16 sm:w-16' },
+          { name: 'folha', className: 'top-28 left-2 h-10 w-8 text-brincando-salvia/35 sm:top-36 sm:left-6 sm:h-14 sm:w-11' },
+          { name: 'abelha', className: 'right-2 top-1/2 h-8 w-11 text-brincando-laranja/30 sm:right-8 sm:h-10 sm:w-14' },
+          { name: 'caracol', className: 'right-6 bottom-24 h-9 w-9 text-brincando-terra/20 sm:right-16 sm:bottom-20 sm:h-12 sm:w-12' },
+        ]}
+      />
       <div className="container-page">
         <SectionReveal className="mx-auto max-w-2xl text-center">
           <p className="font-hand text-2xl text-brincando-laranja">Nossa proposta</p>
