@@ -98,6 +98,84 @@ export function HouseSketch({ className, ...props }: IconProps) {
   )
 }
 
+export function MoonSketch({ className, ...props }: IconProps) {
+  return (
+    <svg viewBox="0 0 64 64" className={className} aria-hidden="true" {...props}>
+      <path
+        {...stroke}
+        strokeWidth={1.8}
+        d="M40.2 14.6c-2.2 4.4-2.6 10.2-.4 15.4 3.2 7.6 10.8 12.2 19 11.6-3.2 10.4-13.8 17.8-25.6 17.2C19.6 58.2 11 47.4 11.6 35.2 12.2 23.6 21.6 14.4 33.2 14c2.4-.1 4.8.2 7 .6z"
+      />
+      <path {...stroke} strokeWidth={1.3} opacity={0.7} d="M44.8 22.4c1.2 2.6 1.4 5.6.4 8.2" />
+    </svg>
+  )
+}
+
+export function StarSketch({ className, ...props }: IconProps) {
+  return (
+    <svg viewBox="0 0 64 64" className={className} aria-hidden="true" {...props}>
+      <path
+        {...stroke}
+        strokeWidth={1.7}
+        d="M32 10.5 37.4 25h15.2L40.8 34.2 46 49.2 32 39.8 18 49.2l5.2-15L11.4 25H26.6z"
+      />
+    </svg>
+  )
+}
+
+export function BirdSketch({ className, ...props }: IconProps) {
+  return (
+    <svg viewBox="0 0 72 56" className={className} aria-hidden="true" {...props}>
+      <path
+        {...stroke}
+        strokeWidth={1.7}
+        d="M10 34.5c8.4-2.2 15.6-8.8 20.2-16.4 2.2 8.6 8.4 15.2 16.6 18.2 6.4 2.4 14.2 2 21.2-.8"
+      />
+      <path {...stroke} d="M30.2 18.2c3.6 1.4 6.2 4.2 7.4 7.8" />
+      <circle cx="24.6" cy="20.8" r="1.3" fill="currentColor" />
+      <path {...stroke} strokeWidth={1.4} d="M54.4 33.6c2.8 3.2 4.6 7.2 4.8 11.4" />
+    </svg>
+  )
+}
+
+export function FlowerSketch({ className, ...props }: IconProps) {
+  return (
+    <svg viewBox="0 0 64 72" className={className} aria-hidden="true" {...props}>
+      <circle cx="32" cy="28" r="6.2" {...stroke} />
+      <path
+        {...stroke}
+        d="M32 12.4c3.2 4.6 3.4 9.6.8 13.2M47.6 21.2c-5.2 2.2-8.8 6.2-9.6 10.8M45.8 39.4c-5.4-1.6-10.2-1.2-13.6 1.6M18.2 39.4c5.4-1.6 10.2-1.2 13.6 1.6M16.4 21.2c5.2 2.2 8.8 6.2 9.6 10.8"
+      />
+      <path {...stroke} d="M32 34.4V60.2" />
+      <path {...stroke} strokeWidth={1.4} d="M32 50.6c-6.2 1.2-10.4 5.2-12.2 10" />
+    </svg>
+  )
+}
+
+export function BeeSketch({ className, ...props }: IconProps) {
+  return (
+    <svg viewBox="0 0 72 56" className={className} aria-hidden="true" {...props}>
+      <ellipse cx="38" cy="30" rx="12.5" ry="9.2" {...stroke} />
+      <path {...stroke} strokeWidth={1.4} d="M30.4 24.8c2.2 6.8 6.4 11.4 11.6 13.6" />
+      <path {...stroke} d="M26.2 30.2 16 26.4M26.8 33.8 17.4 38" />
+      <path
+        {...stroke}
+        d="M42.2 21.4c4.2-6.8 11.6-9.4 16.8-6.2M44.6 22.8c6.2-3.6 13.8-1.6 16.4 4.2"
+      />
+    </svg>
+  )
+}
+
+export function TwigSketch({ className, ...props }: IconProps) {
+  return (
+    <svg viewBox="0 0 80 64" className={className} aria-hidden="true" {...props}>
+      <path {...stroke} strokeWidth={1.8} d="M10 48.5c14-6.4 28.4-22 36.6-34.8" />
+      <path {...stroke} d="M30.4 36.2c6.2-1.4 11.6 1.2 16.4 6.4M38.8 26.6c4.8-3.2 10.6-3.6 16.2-.6" />
+      <path {...stroke} strokeWidth={1.4} d="M46.6 13.8c2.4-3.2 6.2-4.8 10.4-4.2" />
+    </svg>
+  )
+}
+
 function BrincarLivreIcon({ className, ...props }: IconProps) {
   return (
     <svg viewBox="0 0 64 64" className={className} aria-hidden="true" {...props}>
@@ -211,6 +289,12 @@ export const illustratedIcons = {
   folha: LeafSketch,
   nuvem: CloudSketch,
   casa: HouseSketch,
+  lua: MoonSketch,
+  estrela: StarSketch,
+  passarinho: BirdSketch,
+  flor: FlowerSketch,
+  abelha: BeeSketch,
+  galho: TwigSketch,
 } as const
 
 export type IllustratedIconName = keyof typeof illustratedIcons

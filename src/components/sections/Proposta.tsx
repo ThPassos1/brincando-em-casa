@@ -1,5 +1,6 @@
 import { motion, useReducedMotion } from 'framer-motion'
 import type { IllustratedIconName } from '@/assets/illustrations'
+import { Doodle } from '@/components/ui/Doodle'
 import { IllustratedIcon } from '@/components/ui/IllustratedIcon'
 import { SectionReveal } from '@/components/ui/SectionReveal'
 import { fadeUp, stagger, viewportOnce } from '@/lib/motion'
@@ -126,7 +127,9 @@ export function Proposta() {
   const reduce = useReducedMotion()
 
   return (
-    <section id="proposta" className="cv-auto relative bg-brincando-creme py-20 sm:py-24">
+    <section id="proposta" className="cv-auto relative overflow-hidden bg-brincando-creme py-20 sm:py-24">
+      <Doodle name="estrela" className="top-6 right-3 h-10 w-10 text-brincando-laranja/45 sm:top-10 sm:right-10 sm:h-14 sm:w-14" />
+      <Doodle name="lua" className="bottom-8 left-2 h-11 w-11 text-brincando-terra/25 sm:bottom-12 sm:left-8 sm:h-16 sm:w-16" />
       <div className="container-page">
         <SectionReveal className="mx-auto max-w-2xl text-center">
           <p className="font-hand text-2xl text-brincando-laranja">Nossa proposta</p>

@@ -1,10 +1,13 @@
+import { Doodle } from '@/components/ui/Doodle'
 import { BrandLogo } from '@/components/ui/BrandLogo'
 import { SITE } from '@/lib/site'
 import { whatsappUrl } from '@/lib/whatsapp'
 
 export function Footer() {
   return (
-    <footer className="bg-brincando-preto pb-[max(6.5rem,calc(env(safe-area-inset-bottom)+5.25rem))] text-brincando-creme/85 sm:pb-[max(4.5rem,calc(env(safe-area-inset-bottom)+3.5rem))]">
+    <footer className="relative overflow-hidden bg-brincando-preto pb-[max(6.5rem,calc(env(safe-area-inset-bottom)+5.25rem))] text-brincando-creme/85 sm:pb-[max(4.5rem,calc(env(safe-area-inset-bottom)+3.5rem))]">
+      <Doodle name="casa" className="top-6 right-4 h-10 w-10 text-brincando-creme/15 sm:top-10 sm:right-12 sm:h-14 sm:w-14" />
+      <Doodle name="folha" className="bottom-20 left-2 h-12 w-9 text-brincando-salvia/25 sm:bottom-16 sm:left-8 sm:h-16 sm:w-12" />
       <div className="container-page grid gap-10 py-14 sm:grid-cols-2 lg:grid-cols-3">
         <div>
           <a href="#inicio" className="inline-flex items-center gap-3 text-brincando-creme">

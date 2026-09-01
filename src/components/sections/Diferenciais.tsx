@@ -1,3 +1,4 @@
+import { Doodle } from '@/components/ui/Doodle'
 import { IllustratedIcon } from '@/components/ui/IllustratedIcon'
 import { SectionReveal } from '@/components/ui/SectionReveal'
 import { WaveDivider } from '@/components/ui/WaveDivider'
@@ -15,8 +16,10 @@ export function Diferenciais() {
   return (
     <section
       id="diferenciais"
-      className="cv-auto relative bg-brincando-salvia-clara/60 py-20 sm:py-24"
+      className="cv-auto relative overflow-hidden bg-brincando-salvia-clara/60 py-20 sm:py-24"
     >
+      <Doodle name="casa" className="top-10 right-3 h-10 w-10 text-brincando-terra/25 sm:top-16 sm:right-12 sm:h-14 sm:w-14" />
+      <Doodle name="folha" className="bottom-5 left-2 h-12 w-9 text-brincando-salvia sm:bottom-8 sm:left-8 sm:h-16 sm:w-12" />
       <WaveDivider
         fill="var(--brincando-creme)"
         flip

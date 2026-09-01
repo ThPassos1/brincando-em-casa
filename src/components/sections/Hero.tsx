@@ -27,20 +27,20 @@ export function Hero() {
       <motion.div
         aria-hidden
         style={reduce ? undefined : { y: sunY }}
-        className="pointer-events-none absolute top-24 right-10 z-10 hidden text-brincando-laranja sm:block sm:top-24 sm:right-12"
+        className="pointer-events-none absolute top-[9.25rem] right-3 z-10 text-brincando-laranja sm:top-24 sm:right-12"
       >
-        <SunSketch className="h-14 w-14 drop-shadow-sm sm:h-28 sm:w-28" />
+        <SunSketch className="h-11 w-11 drop-shadow-sm sm:h-28 sm:w-28" />
       </motion.div>
       <motion.div
         aria-hidden
         style={reduce ? undefined : { y: leafY }}
-        className="pointer-events-none absolute top-36 left-2 z-20 hidden text-brincando-salvia sm:block sm:top-40 sm:left-10"
+        className="pointer-events-none absolute top-[22rem] left-2 z-10 text-brincando-salvia sm:top-40 sm:left-10"
       >
-        <LeafSketch className="h-16 w-12 drop-shadow-sm sm:h-20 sm:w-16" />
+        <LeafSketch className="h-12 w-9 drop-shadow-sm sm:h-20 sm:w-16" />
       </motion.div>
       <CloudSketch
         aria-hidden
-        className="pointer-events-none absolute top-28 left-1/3 z-20 hidden h-10 w-24 text-brincando-creme/80 sm:block"
+        className="pointer-events-none absolute top-[8.75rem] left-4 z-10 h-7 w-16 text-brincando-creme/70 sm:top-28 sm:left-1/3 sm:h-10 sm:w-24 sm:text-brincando-creme/80"
       />
 
       <div className="relative z-20 container-page pb-[max(5.25rem,calc(env(safe-area-inset-bottom)+4.25rem))] pt-[8.5rem] sm:pt-0 sm:pb-20">

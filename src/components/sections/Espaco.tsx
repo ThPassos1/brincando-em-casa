@@ -1,4 +1,5 @@
 import { Button } from '@/components/ui/Button'
+import { Doodle } from '@/components/ui/Doodle'
 import { ImagePlaceholder } from '@/components/ui/ImagePlaceholder'
 import { SectionReveal } from '@/components/ui/SectionReveal'
 import { mapsDirectionsUrl, mapsEmbedUrl, SITE } from '@/lib/site'
@@ -59,8 +60,10 @@ export function Espaco() {
   return (
     <section
       id="espaco"
-      className="cv-auto relative bg-brincando-salvia-clara/55 py-20 sm:py-24"
+      className="cv-auto relative overflow-hidden bg-brincando-salvia-clara/55 py-20 sm:py-24"
     >
+      <Doodle name="passarinho" className="top-5 right-3 h-9 w-12 text-brincando-terra/30 sm:top-8 sm:right-12 sm:h-12 sm:w-16" />
+      <Doodle name="flor" className="bottom-6 left-2 h-12 w-11 text-brincando-laranja/35 sm:bottom-10 sm:left-8 sm:h-16 sm:w-14" />
       <div className="container-page">
         <SectionReveal className="max-w-2xl">
           <p className="font-hand text-2xl text-brincando-terra">O espaço</p>

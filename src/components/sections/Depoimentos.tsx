@@ -1,6 +1,7 @@
 import { AnimatePresence } from 'framer-motion'
 import { useState } from 'react'
 import { HouseSketch, LeafSketch, SunSketch } from '@/assets/illustrations'
+import { Doodle } from '@/components/ui/Doodle'
 import { Button } from '@/components/ui/Button'
 import { SectionReveal } from '@/components/ui/SectionReveal'
 import {
@@ -244,6 +245,8 @@ export function Depoimentos() {
 
   return (
     <section id="depoimentos" className="cv-auto relative overflow-x-clip bg-brincando-creme py-16 sm:py-20 lg:py-24">
+      <Doodle name="passarinho" className="top-4 left-3 h-8 w-11 text-brincando-terra/25 sm:top-8 sm:left-10 sm:h-11 sm:w-14" />
+      <Doodle name="flor" className="top-8 right-3 h-10 w-9 text-brincando-rosa/50 sm:right-12 sm:h-14 sm:w-12" />
       <div className="container-page">
         <SectionReveal className="max-w-2xl">
           <p className="font-hand text-2xl text-brincando-rosa">Famílias</p>
