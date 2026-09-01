@@ -61,7 +61,7 @@ export function Hero() {
             . Onde brincar, criar e descobrir o mundo são, antes de tudo,
             coisas sérias.
           </p>
-          <div className="mt-8 flex flex-row flex-wrap items-center justify-center gap-2 sm:mt-8 sm:justify-start sm:gap-3">
+          <div className="mt-16 flex flex-row flex-wrap items-center justify-center gap-2 sm:mt-8 sm:justify-start sm:gap-3">
             <Button
               href={whatsappUrl('hero')}
               target="_blank"
