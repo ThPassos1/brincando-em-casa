@@ -1,0 +1,40 @@
+/* Tokens oficiais — Brincando em Casa. Usar via classes Tailwind (bg-brincando-creme, text-brincando-terra…). */
+
+:root {
+  --brincando-laranja: #e8791c;
+  --brincando-preto: #141414;
+  --brincando-creme: #fbf6ef;
+  --brincando-terra: #8a5a3b;
+  --brincando-salvia: #8c9b7a;
+  --brincando-rosa: #e8b4a8;
+}
+
+@theme {
+  --color-brincando-laranja: var(--brincando-laranja);
+  --color-brincando-preto: var(--brincando-preto);
+  --color-brincando-creme: var(--brincando-creme);
+  --color-brincando-terra: var(--brincando-terra);
+  --color-brincando-salvia: var(--brincando-salvia);
+  --color-brincando-rosa: var(--brincando-rosa);
+
+  --color-brincando-laranja-escuro: #c46212;
+  --color-brincando-salvia-clara: #d5dcc8;
+  --color-brincando-creme-escuro: #f3eadc;
+  --color-brincando-terra-escuro: #5a3720;
+  --color-brincando-terra-clara: #c4a484;
+
+  --font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
+  --font-sans: 'Nunito', 'Segoe UI', system-ui, sans-serif;
+  --font-hand: 'Caveat', 'Segoe Print', cursive;
+
+  --shadow-frame: 0 12px 32px -12px rgb(20 20 20 / 0.18),
+    0 2px 8px -2px rgb(138 90 59 / 0.12);
+  --shadow-soft: 0 8px 24px -10px rgb(138 90 59 / 0.2);
+
+  --radius-organic: 1.75rem;
+}
+
+@theme inline {
+  --shadow-frame: var(--shadow-frame);
+  --shadow-soft: var(--shadow-soft);
+}
