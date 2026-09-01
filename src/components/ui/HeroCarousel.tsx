@@ -65,7 +65,7 @@ export function HeroCarousel() {
 
       <div className="absolute inset-x-0 top-0 h-20 bg-linear-to-b from-brincando-creme/55 to-transparent" aria-hidden />
       <div
-        className="absolute inset-x-0 bottom-0 h-20 bg-linear-to-t from-brincando-creme/45 to-transparent sm:h-24 sm:from-brincando-creme sm:via-transparent"
+        className="absolute inset-x-0 bottom-0 h-24 bg-linear-to-t from-brincando-creme to-transparent sm:via-transparent"
         aria-hidden
       />
 
