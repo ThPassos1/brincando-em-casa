@@ -115,7 +115,7 @@ function PropostaCard({
         <span className="mb-3 inline-flex h-14 w-14 items-center justify-center rounded-full bg-brincando-creme text-brincando-laranja shadow-soft ring-1 ring-brincando-terra/12">
           <IllustratedIcon name={icon} className="h-10 w-10" />
         </span>
-        <h3 className="text-2xl text-brincando-preto">{title}</h3>
+        <h3 className="text-2xl">{title}</h3>
         <p className="mt-3 text-brincando-terra">{text}</p>
       </div>
     </article>

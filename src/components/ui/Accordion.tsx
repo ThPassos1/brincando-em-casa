@@ -28,7 +28,7 @@ function AccordionRow({ item, index }: { item: AccordionItem; index: number }) {
           onClick={() => setOpen((v) => !v)}
           className="flex w-full min-h-12 items-start justify-between gap-4 py-4 text-left"
         >
-          <span className="font-display text-lg font-medium text-brincando-preto sm:text-xl">
+          <span className="font-display text-lg font-medium text-brincando-terra sm:text-xl">
             <span className="mr-2 font-hand text-brincando-laranja">
               {String(index + 1).padStart(2, '0')}
             </span>

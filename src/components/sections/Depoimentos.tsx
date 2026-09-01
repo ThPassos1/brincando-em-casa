@@ -264,7 +264,7 @@ export function Depoimentos() {
                 <p className="font-hand text-xl text-brincando-laranja">
                   {story.kicker}
                 </p>
-                <p className="mt-2 font-display text-[1.35rem] leading-snug text-brincando-preto sm:text-2xl lg:text-[1.7rem]">
+                <p className="mt-2 font-display text-[1.35rem] leading-snug text-brincando-terra sm:text-2xl lg:text-[1.7rem]">
                   “{story.quote}”
                 </p>
                 {story.author ? (
