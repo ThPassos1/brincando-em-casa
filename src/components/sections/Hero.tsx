@@ -20,7 +20,7 @@ export function Hero() {
     <section
       ref={ref}
       id="inicio"
-      className="relative flex min-h-[100svh] flex-col justify-end overflow-hidden pt-[calc(4.4rem+env(safe-area-inset-top))] sm:min-h-svh"
+      className="relative flex min-h-[100svh] flex-col justify-center overflow-hidden pt-[calc(4.4rem+env(safe-area-inset-top))] sm:min-h-svh sm:justify-end"
     >
       <HeroCarousel />
 
@@ -48,12 +48,12 @@ export function Hero() {
           initial={reduce ? false : { opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-          className="max-w-2xl"
+          className="mx-auto max-w-2xl text-center sm:mx-0 sm:text-left"
         >
-          <h1 className="max-w-[14.5rem] text-[1.45rem] leading-[1.18] text-brincando-terra-escuro [text-shadow:0_2px_16px_var(--brincando-creme),0_0_36px_var(--brincando-creme)] sm:max-w-none sm:text-5xl lg:text-[3.4rem]">
+          <h1 className="text-[1.55rem] leading-[1.2] text-brincando-terra-escuro [text-shadow:0_2px_16px_var(--brincando-creme),0_0_36px_var(--brincando-creme)] sm:text-5xl lg:text-[3.4rem]">
             Um lugar onde a infância tem tempo para acontecer
           </h1>
-          <p className="mt-4 hidden max-w-xl rounded-[1.2rem_1.5rem_1.1rem_1.6rem] bg-brincando-creme/55 px-3.5 py-3 text-[0.95rem] font-semibold text-brincando-terra-escuro sm:mt-5 sm:block sm:px-5 sm:py-3.5 sm:text-lg">
+          <p className="mx-auto mt-4 max-w-[20.5rem] rounded-[1.2rem_1.5rem_1.1rem_1.6rem] bg-brincando-creme/72 px-3.5 py-3 text-[0.9rem] leading-relaxed font-semibold text-brincando-terra-escuro sm:mx-0 sm:mt-5 sm:max-w-xl sm:bg-brincando-creme/55 sm:px-5 sm:py-3.5 sm:text-lg">
             Espaço Educativo em Manaus com práticas inspiradas na{' '}
             <span className="font-bold text-brincando-laranja">
               Pedagogia Waldorf
@@ -61,7 +61,7 @@ export function Hero() {
             . Onde brincar, criar e descobrir o mundo são, antes de tudo,
             coisas sérias.
           </p>
-          <div className="mt-5 flex flex-row flex-wrap items-center gap-2 sm:mt-8 sm:gap-3">
+          <div className="mt-5 flex flex-row flex-wrap items-center justify-center gap-2 sm:mt-8 sm:justify-start sm:gap-3">
             <Button
               href={whatsappUrl('hero')}
               target="_blank"
