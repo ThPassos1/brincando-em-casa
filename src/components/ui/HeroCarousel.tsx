@@ -6,14 +6,17 @@ import { isSafeAssetPath } from '@/lib/security'
 const slides = [
   {
     src: '/hero/hero-01.png',
+    mobileSrc: '/hero/hero-01-mobile.jpg',
     alt: 'Crianças pintando com folhas na Brincando em Casa',
   },
   {
     src: '/hero/hero-02.png',
+    mobileSrc: '/hero/hero-02-mobile.jpg',
     alt: 'Criança pintando com folha e tinta na Brincando em Casa',
   },
   {
     src: '/hero/hero-03.png',
+    mobileSrc: '/hero/hero-03-mobile.jpg',
     alt: 'Criança brincando na areia do quintal da Brincando em Casa',
   },
 ] as const
@@ -40,21 +43,23 @@ export function HeroCarousel() {
       onMouseLeave={() => setPaused(false)}
     >
       {slides.map((slide, i) =>
-        isSafeAssetPath(slide.src) ? (
-        <img
-          key={slide.src}
-          src={slide.src}
-          alt={slide.alt}
-          width={1600}
-          height={900}
-          loading={i === 0 ? 'eager' : 'lazy'}
-          decoding={i === 0 ? 'sync' : 'async'}
-          fetchPriority={i === 0 ? 'high' : 'low'}
-          className={cn(
-            'absolute inset-0 h-full w-full object-cover object-[center_12%] transition-opacity duration-1000 ease-out sm:object-center',
-            i === index ? 'opacity-100' : 'opacity-0',
-          )}
-        />
+        isSafeAssetPath(slide.src) && isSafeAssetPath(slide.mobileSrc) ? (
+        <picture key={slide.src} className="absolute inset-0 block h-full w-full">
+          <source media="(max-width: 639px)" srcSet={slide.mobileSrc} />
+          <img
+            src={slide.src}
+            alt={slide.alt}
+            width={1600}
+            height={900}
+            loading={i === 0 ? 'eager' : 'lazy'}
+            decoding={i === 0 ? 'sync' : 'async'}
+            fetchPriority={i === 0 ? 'high' : 'low'}
+            className={cn(
+              'absolute inset-0 h-full w-full object-cover object-center transition-opacity duration-1000 ease-out',
+              i === index ? 'opacity-100' : 'opacity-0',
+            )}
+          />
+        </picture>
         ) : null,
       )}
 
