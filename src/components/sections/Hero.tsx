@@ -20,7 +20,7 @@ export function Hero() {
     <section
       ref={ref}
       id="inicio"
-      className="relative flex min-h-[100svh] flex-col justify-center overflow-hidden pt-[calc(4.4rem+env(safe-area-inset-top))] sm:min-h-svh sm:justify-end"
+      className="relative flex min-h-[100svh] flex-col overflow-hidden pt-[calc(4.4rem+env(safe-area-inset-top))] sm:min-h-svh sm:justify-end"
     >
       <HeroCarousel />
 
@@ -43,14 +43,14 @@ export function Hero() {
         className="pointer-events-none absolute top-28 left-1/3 z-20 hidden h-10 w-24 text-brincando-creme/80 sm:block"
       />
 
-      <div className="relative z-20 container-page pb-[max(5.5rem,calc(env(safe-area-inset-bottom)+4.5rem))] sm:pb-20">
+      <div className="relative z-20 container-page flex flex-1 flex-col pt-6 pb-[max(5.5rem,calc(env(safe-area-inset-bottom)+4.5rem))] sm:block sm:flex-none sm:pt-0 sm:pb-20">
         <motion.div
           initial={reduce ? false : { opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           className="mx-auto max-w-2xl text-center sm:mx-0 sm:text-left"
         >
-          <h1 className="text-[1.55rem] leading-[1.2] text-brincando-terra-escuro [text-shadow:0_2px_16px_var(--brincando-creme),0_0_36px_var(--brincando-creme)] sm:text-5xl lg:text-[3.4rem]">
+          <h1 className="text-[2.15rem] leading-[1.15] text-brincando-terra-escuro [text-shadow:0_2px_16px_var(--brincando-creme),0_0_36px_var(--brincando-creme)] sm:text-5xl lg:text-[3.4rem]">
             Um lugar onde a infância tem tempo para acontecer
           </h1>
           <p className="mx-auto mt-4 max-w-[20.5rem] rounded-[1.2rem_1.5rem_1.1rem_1.6rem] bg-brincando-creme/72 px-3.5 py-3 text-[0.9rem] leading-relaxed font-semibold text-brincando-terra-escuro sm:mx-0 sm:mt-5 sm:max-w-xl sm:bg-brincando-creme/55 sm:px-5 sm:py-3.5 sm:text-lg">
@@ -61,30 +61,30 @@ export function Hero() {
             . Onde brincar, criar e descobrir o mundo são, antes de tudo,
             coisas sérias.
           </p>
-          <div className="mt-5 flex flex-row flex-wrap items-center justify-center gap-2 sm:mt-8 sm:justify-start sm:gap-3">
-            <Button
-              href={whatsappUrl('hero')}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="pulse-heart w-fit max-sm:!min-h-10 max-sm:!px-4 max-sm:!py-2 max-sm:!text-sm"
-            >
-              Agendar uma visita
-            </Button>
-            <Button
-              href="#proposta"
-              variant="secondary"
-              className="!bg-brincando-creme/80 w-fit text-brincando-terra-escuro max-sm:!min-h-10 max-sm:!px-4 max-sm:!py-2 max-sm:!text-sm"
-            >
-              Conhecer a proposta
-            </Button>
-          </div>
-          <p className="mt-5 hidden font-hand text-lg font-semibold text-brincando-terra-escuro [text-shadow:0_2px_16px_var(--brincando-creme),0_0_36px_var(--brincando-creme)] sm:block sm:text-xl">
-            🌿 Práticas inspiradas na Pedagogia Waldorf
-          </p>
-          <p className="mt-1 hidden max-w-md text-sm font-semibold break-words text-brincando-terra-escuro [text-shadow:0_2px_16px_var(--brincando-creme),0_0_36px_var(--brincando-creme)] sm:block">
-            {SITE.address.line}
-          </p>
         </motion.div>
+        <div className="mt-auto flex flex-row flex-wrap items-center justify-center gap-2 pt-6 sm:mt-8 sm:justify-start sm:pt-0 sm:gap-3">
+          <Button
+            href={whatsappUrl('hero')}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="pulse-heart w-fit max-sm:!min-h-10 max-sm:!px-4 max-sm:!py-2 max-sm:!text-sm"
+          >
+            Agendar uma visita
+          </Button>
+          <Button
+            href="#proposta"
+            variant="secondary"
+            className="!bg-brincando-creme/80 w-fit text-brincando-terra-escuro max-sm:!min-h-10 max-sm:!px-4 max-sm:!py-2 max-sm:!text-sm"
+          >
+            Conhecer a proposta
+          </Button>
+        </div>
+        <p className="mt-5 hidden font-hand text-lg font-semibold text-brincando-terra-escuro [text-shadow:0_2px_16px_var(--brincando-creme),0_0_36px_var(--brincando-creme)] sm:block sm:text-xl">
+          🌿 Práticas inspiradas na Pedagogia Waldorf
+        </p>
+        <p className="mt-1 hidden max-w-md text-sm font-semibold break-words text-brincando-terra-escuro [text-shadow:0_2px_16px_var(--brincando-creme),0_0_36px_var(--brincando-creme)] sm:block">
+          {SITE.address.line}
+        </p>
       </div>
     </section>
   )
