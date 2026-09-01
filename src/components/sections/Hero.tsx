@@ -34,7 +34,7 @@ export function Hero() {
       <motion.div
         aria-hidden
         style={reduce ? undefined : { y: leafY }}
-        className="pointer-events-none absolute top-36 left-2 z-20 hidden text-brincando-salvia min-[480px]:block sm:top-40 sm:left-10"
+        className="pointer-events-none absolute top-36 left-2 z-20 hidden text-brincando-salvia sm:block sm:top-40 sm:left-10"
       >
         <LeafSketch className="h-16 w-12 drop-shadow-sm sm:h-20 sm:w-16" />
       </motion.div>
@@ -43,17 +43,17 @@ export function Hero() {
         className="pointer-events-none absolute top-28 left-1/3 z-20 hidden h-10 w-24 text-brincando-creme/80 sm:block"
       />
 
-      <div className="relative z-20 container-page pb-[max(5.75rem,calc(env(safe-area-inset-bottom)+4.75rem))] sm:pb-20">
+      <div className="relative z-20 container-page pb-[max(5.5rem,calc(env(safe-area-inset-bottom)+4.5rem))] sm:pb-20">
         <motion.div
           initial={reduce ? false : { opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           className="max-w-2xl"
         >
-          <h1 className="text-[1.85rem] leading-[1.15] text-brincando-terra-escuro [text-shadow:0_2px_16px_var(--brincando-creme),0_0_36px_var(--brincando-creme)] sm:text-5xl lg:text-[3.4rem]">
+          <h1 className="max-w-[14.5rem] text-[1.45rem] leading-[1.18] text-brincando-terra-escuro [text-shadow:0_2px_16px_var(--brincando-creme),0_0_36px_var(--brincando-creme)] sm:max-w-none sm:text-5xl lg:text-[3.4rem]">
             Um lugar onde a infância tem tempo para acontecer
           </h1>
-          <p className="mt-4 max-w-xl rounded-[1.2rem_1.5rem_1.1rem_1.6rem] bg-brincando-creme/55 px-3.5 py-3 text-[0.95rem] font-semibold text-brincando-terra-escuro sm:mt-5 sm:px-5 sm:py-3.5 sm:text-lg">
+          <p className="mt-4 hidden max-w-xl rounded-[1.2rem_1.5rem_1.1rem_1.6rem] bg-brincando-creme/55 px-3.5 py-3 text-[0.95rem] font-semibold text-brincando-terra-escuro sm:mt-5 sm:block sm:px-5 sm:py-3.5 sm:text-lg">
             Espaço Educativo em Manaus com práticas inspiradas na{' '}
             <span className="font-bold text-brincando-laranja">
               Pedagogia Waldorf
@@ -61,19 +61,19 @@ export function Hero() {
             . Onde brincar, criar e descobrir o mundo são, antes de tudo,
             coisas sérias.
           </p>
-          <div className="mt-6 flex flex-col gap-3 sm:mt-8 sm:flex-row sm:items-center">
+          <div className="mt-5 flex flex-row flex-wrap items-center gap-2 sm:mt-8 sm:gap-3">
             <Button
               href={whatsappUrl('hero')}
               target="_blank"
               rel="noopener noreferrer"
-              className="pulse-heart w-full sm:w-auto"
+              className="pulse-heart w-fit max-sm:!min-h-10 max-sm:!px-4 max-sm:!py-2 max-sm:!text-sm"
             >
               Agendar uma visita
             </Button>
             <Button
               href="#proposta"
               variant="secondary"
-              className="!bg-brincando-creme/80 w-full text-brincando-terra-escuro sm:w-auto"
+              className="!bg-brincando-creme/80 w-fit text-brincando-terra-escuro max-sm:!min-h-10 max-sm:!px-4 max-sm:!py-2 max-sm:!text-sm"
             >
               Conhecer a proposta
             </Button>

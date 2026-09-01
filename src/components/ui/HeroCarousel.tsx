@@ -51,7 +51,7 @@ export function HeroCarousel() {
           decoding={i === 0 ? 'sync' : 'async'}
           fetchPriority={i === 0 ? 'high' : 'low'}
           className={cn(
-            'absolute inset-0 h-full w-full object-cover object-[center_28%] transition-opacity duration-1000 ease-out sm:object-center',
+            'absolute inset-0 h-full w-full object-cover object-[center_12%] transition-opacity duration-1000 ease-out sm:object-center',
             i === index ? 'opacity-100' : 'opacity-0',
           )}
         />
@@ -59,9 +59,12 @@ export function HeroCarousel() {
       )}
 
       <div className="absolute inset-x-0 top-0 h-20 bg-linear-to-b from-brincando-creme/55 to-transparent" aria-hidden />
-      <div className="absolute inset-x-0 bottom-0 h-24 bg-linear-to-t from-brincando-creme to-transparent" aria-hidden />
+      <div
+        className="absolute inset-x-0 bottom-0 h-[48%] bg-linear-to-t from-brincando-creme from-10% via-brincando-creme/80 to-transparent sm:h-24 sm:from-brincando-creme sm:via-transparent"
+        aria-hidden
+      />
 
-      <div className="absolute top-[42%] left-1/2 z-10 flex -translate-x-1/2 gap-1 sm:top-auto sm:bottom-6 sm:gap-2">
+      <div className="absolute top-[36%] left-1/2 z-10 flex -translate-x-1/2 gap-1 sm:top-auto sm:bottom-6 sm:gap-2">
         {slides.map((slide, i) => (
           <button
             key={slide.src}
