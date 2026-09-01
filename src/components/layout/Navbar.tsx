@@ -62,13 +62,16 @@ export function Navbar() {
       )}
     >
       <nav
-        className="container-page flex h-[4.4rem] items-center justify-between gap-4"
+        className="container-page flex h-[4.4rem] items-center justify-between gap-3 xl:gap-5"
         aria-label="Principal"
       >
-        <a href="#inicio" className="flex min-w-0 items-center gap-2 text-brincando-preto sm:gap-2.5">
+        <a
+          href="#inicio"
+          className="flex min-w-0 shrink items-center gap-2 text-brincando-preto sm:gap-2.5 xl:min-w-fit xl:shrink-0"
+        >
           <BrandLogo className="h-10 shrink-0 sm:h-12" />
-          <span className="hidden min-w-0 leading-tight sm:block">
-            <span className="block truncate font-display text-[1.05rem] font-bold sm:text-[1.1rem]">
+          <span className="hidden min-w-0 leading-tight sm:block xl:min-w-fit">
+            <span className="block font-display text-[1.05rem] font-bold whitespace-nowrap sm:text-[1.1rem] max-xl:max-w-[9.5rem] max-xl:truncate">
               {SITE.shortName}
             </span>
             <span className="hidden font-hand text-[1.05rem] font-bold text-brincando-terra-escuro drop-shadow-[0_1px_10px_var(--brincando-creme)] sm:block">
@@ -77,12 +80,12 @@ export function Navbar() {
           </span>
         </a>
 
-        <ul className="hidden items-center gap-4 xl:flex xl:gap-5">
+        <ul className="hidden min-w-0 items-center justify-center xl:flex xl:gap-3 2xl:gap-5">
           {links.map((link) => (
-            <li key={link.href}>
+            <li key={link.href} className="shrink-0">
               <a
                 href={link.href}
-                className="text-[1rem] font-bold text-brincando-terra-escuro drop-shadow-[0_1px_10px_var(--brincando-creme)] transition-colors hover:text-brincando-laranja"
+                className="whitespace-nowrap text-[0.92rem] font-bold text-brincando-terra-escuro drop-shadow-[0_1px_10px_var(--brincando-creme)] transition-colors hover:text-brincando-laranja 2xl:text-[1rem]"
               >
                 {link.label}
               </a>
@@ -90,7 +93,7 @@ export function Navbar() {
           ))}
         </ul>
 
-        <div className="flex items-center gap-2">
+        <div className="flex shrink-0 items-center gap-2">
           <span className="hidden items-center gap-2 md:inline-flex xl:hidden">
             <Button
               href={SITE.instagram}
@@ -119,17 +122,19 @@ export function Navbar() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Abrir o Instagram da Brincando em Casa"
+              className="px-3 py-2.5 2xl:px-6 2xl:py-3"
             >
               <InstagramMark className="h-4.5 w-4.5" />
-              Instagram
+              <span className="hidden 2xl:inline">Instagram</span>
             </Button>
             <Button
               href={whatsappUrl('float')}
               target="_blank"
               rel="noopener noreferrer"
-              className="pulse-heart"
+              className="pulse-heart px-5 py-2.5 2xl:px-6 2xl:py-3"
             >
-              Falar no WhatsApp
+              <span className="2xl:hidden">WhatsApp</span>
+              <span className="hidden 2xl:inline">Falar no WhatsApp</span>
             </Button>
           </span>
           <button

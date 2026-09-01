@@ -83,6 +83,12 @@ button {
   }
 }
 
+@media (min-width: 1280px) {
+  .container-page {
+    max-width: 80rem;
+  }
+}
+
 .snap-scroller {
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
