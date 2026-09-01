@@ -1,5 +1,6 @@
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion'
 import { useEffect } from 'react'
+import { createPortal } from 'react-dom'
 import { ImagePlaceholder } from '@/components/ui/ImagePlaceholder'
 import { cn } from '@/lib/cn'
 import { isSafeAssetPath } from '@/lib/security'
@@ -63,12 +64,12 @@ export function VideoLightbox({
     }
   }, [onClose])
 
-  return (
+  return createPortal(
     <motion.div
       role="dialog"
       aria-modal="true"
       aria-label={`Vídeo: ${video.author}`}
-      className="fixed inset-0 z-[100] flex items-center justify-center bg-brincando-preto/78 p-3 sm:p-4"
+      className="fixed inset-0 z-[100] flex items-center justify-center bg-brincando-preto/78 p-3 pt-[max(0.75rem,env(safe-area-inset-top))] pb-[max(0.75rem,env(safe-area-inset-bottom))] sm:p-4"
       initial={reduce ? false : { opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
@@ -77,7 +78,7 @@ export function VideoLightbox({
       <button
         type="button"
         onClick={onClose}
-        className="absolute top-[max(0.75rem,env(safe-area-inset-top))] right-[max(0.75rem,env(safe-area-inset-right))] min-h-11 min-w-11 font-hand text-2xl text-brincando-creme"
+        className="absolute top-[max(0.75rem,env(safe-area-inset-top))] right-[max(0.75rem,env(safe-area-inset-right))] z-10 min-h-11 min-w-11 font-hand text-2xl text-brincando-creme"
       >
         fechar
       </button>
@@ -85,8 +86,8 @@ export function VideoLightbox({
         className={cn(
           'relative overflow-hidden rounded-2xl bg-brincando-preto',
           video.orientation === 'vertical'
-            ? 'h-[min(78svh,36rem)] w-[min(calc(100vw-1.5rem),22rem)] max-h-[calc(100svh-5.5rem)] aspect-[9/16]'
-            : 'w-[min(92vw,56rem)] aspect-video',
+            ? 'aspect-[9/16] h-[min(82svh,34rem,calc((100vw-1.5rem)*16/9))] w-auto max-w-[calc(100vw-1.5rem)]'
+            : 'aspect-video w-[min(92vw,56rem)] max-h-[calc(100svh-2rem)]',
         )}
         onClick={(event) => event.stopPropagation()}
       >
@@ -104,7 +105,7 @@ export function VideoLightbox({
             autoPlay
             playsInline
             preload="metadata"
-            className="h-full w-full object-cover"
+            className="h-full w-full object-contain"
           />
         ) : (
           <div className="flex h-full w-full flex-col items-center justify-center gap-3 bg-brincando-creme-escuro px-6 text-center">
@@ -115,7 +116,8 @@ export function VideoLightbox({
           </div>
         )}
       </div>
-    </motion.div>
+    </motion.div>,
+    document.body,
   )
 }
 
