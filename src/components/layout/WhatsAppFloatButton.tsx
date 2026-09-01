@@ -7,7 +7,7 @@ export function WhatsAppFloatButton() {
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Falar no WhatsApp"
-      className="pulse-heart fixed z-[60] inline-flex h-14 w-14 items-center justify-center rounded-full bg-brincando-laranja text-brincando-creme shadow-frame right-[max(1rem,env(safe-area-inset-right))] bottom-[max(5.25rem,calc(env(safe-area-inset-bottom)+4.25rem))] sm:right-[max(1.5rem,env(safe-area-inset-right))] sm:bottom-[max(1.5rem,env(safe-area-inset-bottom))]"
+      className="pulse-heart fixed z-[60] inline-flex h-14 w-14 items-center justify-center rounded-full bg-brincando-laranja text-brincando-creme shadow-frame right-[max(1rem,env(safe-area-inset-right))] bottom-[max(1.35rem,calc(env(safe-area-inset-bottom)+0.6rem))] sm:right-[max(1.5rem,env(safe-area-inset-right))] sm:bottom-[max(1.5rem,env(safe-area-inset-bottom))]"
     >
       <svg viewBox="0 0 24 24" className="relative h-7 w-7" aria-hidden="true">
         <path

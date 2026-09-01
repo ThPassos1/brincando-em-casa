@@ -20,7 +20,7 @@ export function Hero() {
     <section
       ref={ref}
       id="inicio"
-      className="relative flex min-h-[100svh] flex-col justify-center overflow-hidden pt-[calc(4.4rem+env(safe-area-inset-top))] sm:min-h-svh sm:justify-end"
+      className="relative flex min-h-[100svh] flex-col overflow-hidden pt-[calc(4.4rem+env(safe-area-inset-top))] sm:min-h-svh sm:justify-end"
     >
       <HeroCarousel />
 
@@ -43,12 +43,12 @@ export function Hero() {
         className="pointer-events-none absolute top-28 left-1/3 z-20 hidden h-10 w-24 text-brincando-creme/80 sm:block"
       />
 
-      <div className="relative z-20 container-page pb-[max(5.25rem,calc(env(safe-area-inset-bottom)+4.25rem))] sm:pb-20">
+      <div className="relative z-20 container-page flex flex-1 flex-col pb-[max(4.25rem,calc(env(safe-area-inset-bottom)+3rem))] sm:block sm:flex-none sm:pb-20">
         <motion.div
           initial={reduce ? false : { opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-          className="mx-auto flex max-w-2xl flex-col items-center text-center sm:mx-0 sm:items-start sm:text-left"
+          className="mx-auto mt-4 flex max-w-2xl flex-col items-center text-center sm:mx-0 sm:mt-0 sm:items-start sm:text-left"
         >
           <h1 className="text-[2.15rem] leading-[1.15] text-brincando-terra-escuro [text-shadow:0_2px_16px_var(--brincando-creme),0_0_36px_var(--brincando-creme)] sm:text-5xl lg:text-[3.4rem]">
             Um lugar onde a infância tem tempo para acontecer
@@ -61,30 +61,30 @@ export function Hero() {
             . Onde brincar, criar e descobrir o mundo são, antes de tudo,
             coisas sérias.
           </p>
-          <div className="mt-16 flex flex-row flex-wrap items-center justify-center gap-2 sm:mt-8 sm:justify-start sm:gap-3">
-            <Button
-              href={whatsappUrl('hero')}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="pulse-heart w-fit max-sm:!min-h-10 max-sm:!px-4 max-sm:!py-2 max-sm:!text-sm"
-            >
-              Agendar uma visita
-            </Button>
-            <Button
-              href="#proposta"
-              variant="secondary"
-              className="!bg-brincando-creme/80 w-fit text-brincando-terra-escuro max-sm:!min-h-10 max-sm:!px-4 max-sm:!py-2 max-sm:!text-sm"
-            >
-              Conhecer a proposta
-            </Button>
-          </div>
-          <p className="mt-5 hidden font-hand text-lg font-semibold text-brincando-terra-escuro [text-shadow:0_2px_16px_var(--brincando-creme),0_0_36px_var(--brincando-creme)] sm:block sm:text-xl">
-            🌿 Práticas inspiradas na Pedagogia Waldorf
-          </p>
-          <p className="mt-1 hidden max-w-md text-sm font-semibold break-words text-brincando-terra-escuro [text-shadow:0_2px_16px_var(--brincando-creme),0_0_36px_var(--brincando-creme)] sm:block">
-            {SITE.address.line}
-          </p>
         </motion.div>
+        <div className="mt-auto mb-8 flex flex-row flex-wrap items-center justify-center gap-2.5 sm:mt-8 sm:mb-0 sm:justify-start sm:gap-3">
+          <Button
+            href={whatsappUrl('hero')}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="pulse-heart w-fit max-sm:!min-h-11 max-sm:!px-5 max-sm:!py-2.5 max-sm:!text-[0.9rem]"
+          >
+            Agendar uma visita
+          </Button>
+          <Button
+            href="#proposta"
+            variant="secondary"
+            className="!bg-brincando-creme/80 w-fit text-brincando-terra-escuro max-sm:!min-h-11 max-sm:!px-5 max-sm:!py-2.5 max-sm:!text-[0.9rem]"
+          >
+            Conhecer a proposta
+          </Button>
+        </div>
+        <p className="mt-5 hidden font-hand text-lg font-semibold text-brincando-terra-escuro [text-shadow:0_2px_16px_var(--brincando-creme),0_0_36px_var(--brincando-creme)] sm:block sm:text-xl">
+          🌿 Práticas inspiradas na Pedagogia Waldorf
+        </p>
+        <p className="mt-1 hidden max-w-md text-sm font-semibold break-words text-brincando-terra-escuro [text-shadow:0_2px_16px_var(--brincando-creme),0_0_36px_var(--brincando-creme)] sm:block">
+          {SITE.address.line}
+        </p>
       </div>
     </section>
   )

@@ -69,7 +69,7 @@ export function HeroCarousel() {
         aria-hidden
       />
 
-      <div className="absolute top-[calc(4.55rem+env(safe-area-inset-top))] left-1/2 z-10 flex -translate-x-1/2 gap-1 sm:top-auto sm:bottom-6 sm:gap-2">
+      <div className="absolute bottom-[max(0.7rem,env(safe-area-inset-bottom))] left-1/2 z-10 flex -translate-x-1/2 gap-1 sm:bottom-6 sm:gap-2">
         {slides.map((slide, i) => (
           <button
             key={slide.src}
