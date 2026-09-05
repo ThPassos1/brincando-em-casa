@@ -46,6 +46,7 @@ function useHash() {
   return hash
 }
 
+/** Landing pública — só montada quando SITE_PUBLIC_ACCESS = true. */
 export default function App() {
   const hash = useHash()
   const isPrivacy = hash === PRIVACY_HASH
