@@ -2,7 +2,7 @@
 
 Landing page de conversão para a [Brincando em Casa](https://brincandoemcasa.com.br), espaço educativo em Manaus com práticas inspiradas na Pedagogia Waldorf. O objetivo é receber o tráfego de anúncios (Meta e Google) e levar a família até o WhatsApp para agendar uma visita.
 
-**Live:** [brincando-em-casa.vercel.app](https://brincando-em-casa.vercel.app)
+**Status:** off no domínio gratuito da Vercel (`brincando-em-casa.vercel.app`). O acesso público fica bloqueado até o lançamento com domínio próprio — ver `src/config/publicAccess.ts`.
 
 Projeto desenvolvido pela [TechT](https://www.techt.agency/).
 
