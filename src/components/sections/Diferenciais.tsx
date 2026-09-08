@@ -5,7 +5,7 @@ import { WaveDivider } from '@/components/ui/WaveDivider'
 
 const itens = [
   'Turmas reduzidas, com atenção real a cada criança',
-  'Educadores formados em Pedagogia Waldorf',
+  'Educadores capacitados e atenciosos',
   'Ambiente natural, dentro da cidade de Manaus',
   'Rotina com ritmo, sem pressa e sem telas',
   'Alimentação cuidada e saudável',

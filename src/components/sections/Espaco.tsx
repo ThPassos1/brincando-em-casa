@@ -1,66 +1,141 @@
 import { Button } from '@/components/ui/Button'
 import { DoodleField } from '@/components/ui/Doodle'
-import { ImagePlaceholder } from '@/components/ui/ImagePlaceholder'
+import {
+  PhotoClothesline,
+  type ClotheslinePhoto,
+} from '@/components/ui/PhotoClothesline'
 import { SectionReveal } from '@/components/ui/SectionReveal'
 import { mapsDirectionsUrl, mapsEmbedUrl, SITE } from '@/lib/site'
 import { whatsappUrl } from '@/lib/whatsapp'
 
-const photos = [
+const photos: ClotheslinePhoto[] = [
   {
-    slot: 'IMG_ESPACO_01',
-    src: '/espaco/pes-terra.png',
+    src: '/espaco/pes-terra.webp',
     caption: 'Onde os pés descobrem a terra',
     alt: 'Criança brincando descalça na canoa de madeira no quintal da Brincando em Casa',
     objectPosition: 'center 45%',
-    aspect: '4/5',
+    size: 'lg',
+    rotate: -6,
+    hang: 10,
+    paper: '#f7f1e4',
   },
   {
-    slot: 'IMG_ESPACO_02',
-    src: '/espaco/cantinho-brincar.png',
+    src: '/espaco/tenda-lilas.webp',
+    caption: 'Um esconderijo de faz de conta',
+    alt: 'Criança brincando dentro de um cantinho coberto por tecido lilás',
+    objectPosition: 'center 40%',
+    size: 'sm',
+    rotate: 5,
+    hang: 28,
+    paper: '#fbf6ee',
+  },
+  {
+    src: '/espaco/cantinho-brincar.webp',
     caption: 'Cantinho de brincar, cheio de histórias',
     alt: 'Educadora puxando crianças em um carrinho de madeira no quintal',
     objectPosition: '42% 50%',
-    aspect: '4/5',
+    size: 'md',
+    rotate: -3,
+    hang: 6,
+    paper: '#f3e6d4',
   },
   {
-    slot: 'IMG_ESPACO_03',
-    src: '/espaco/luz-natural.png',
+    src: '/espaco/roda-historias.webp',
+    caption: 'Roda de histórias no cantinho',
+    alt: 'Educadora e crianças sentadas em roda na salinha da Brincando em Casa',
+    objectPosition: 'center 35%',
+    size: 'lg',
+    rotate: 7,
+    hang: 18,
+    paper: '#f6efe3',
+  },
+  {
+    src: '/espaco/luz-natural.webp',
     caption: 'Luz natural, tempo de sobra',
     alt: 'Lanche ao ar livre com colher de madeira e tangerina na Brincando em Casa',
     objectPosition: '38% 55%',
-    aspect: '4/5',
+    size: 'md',
+    rotate: 4,
+    hang: 22,
+    paper: '#f4ebe0',
   },
   {
-    slot: 'IMG_ESPACO_04',
-    src: '/espaco/quintal.png',
+    src: '/espaco/fogao-madeira.webp',
+    caption: 'Fogão de madeira, brincar de verdade',
+    alt: 'Criança brincando com fogão de madeira sobre o tapete',
+    objectPosition: 'center 60%',
+    size: 'sm',
+    rotate: -7,
+    hang: 8,
+    paper: '#fbf6ee',
+  },
+  {
+    src: '/espaco/quintal.webp',
     caption: 'Nosso quintal é a maior sala da escola',
     alt: 'Crianças e educadora pintando juntas à mesa no quintal',
     objectPosition: '52% 48%',
-    aspect: '4/5',
+    size: 'lg',
+    rotate: -4,
+    hang: 14,
+    paper: '#f7f1e4',
   },
   {
-    slot: 'IMG_ESPACO_05',
-    src: '/espaco/materiais.png',
+    src: '/espaco/mesa-aquarela.webp',
+    caption: 'A mesa pronta para o fazer do dia',
+    alt: 'Mesa da salinha preparada com papéis, tintas e pincéis para aquarela',
+    objectPosition: 'center 45%',
+    size: 'md',
+    rotate: 6,
+    hang: 26,
+    paper: '#f3e6d4',
+  },
+  {
+    src: '/espaco/materiais.webp',
     caption: 'Materiais simples, imaginação sem limite',
     alt: 'Tintas, pincéis e paletas sobre a mesa da Brincando em Casa',
     objectPosition: 'center',
-    aspect: '4/5',
+    size: 'sm',
+    rotate: 8,
+    hang: 12,
+    paper: '#f6efe3',
   },
   {
-    slot: 'IMG_ESPACO_06',
-    src: '/espaco/ritmo-crianca.png',
+    src: '/espaco/bonequinhas.webp',
+    caption: 'Um mundinho do tamanho da infância',
+    alt: 'Bonecas de pano e móveis de madeira em brincadeira no chão',
+    objectPosition: 'center 55%',
+    size: 'md',
+    rotate: -5,
+    hang: 24,
+    paper: '#f4ebe0',
+  },
+  {
+    src: '/espaco/ritmo-crianca.webp',
     caption: 'Cada criança no seu próprio ritmo',
     alt: 'Criança com o avental laranja da Brincando em Casa',
     objectPosition: 'center 42%',
-    aspect: '4/5',
+    size: 'lg',
+    rotate: 3,
+    hang: 4,
+    paper: '#f7f1e4',
   },
-] as const
+  {
+    src: '/espaco/pao-maos.webp',
+    caption: 'O pão que as mãos fizeram',
+    alt: 'Mãos de uma criança mostrando um pão feito na Brincando em Casa',
+    objectPosition: 'center 40%',
+    size: 'md',
+    rotate: -8,
+    hang: 20,
+    paper: '#fbf6ee',
+  },
+]
 
 export function Espaco() {
   return (
     <section
       id="espaco"
-      className="cv-auto relative overflow-hidden bg-brincando-salvia-clara/55 py-20 sm:py-24"
+      className="relative overflow-x-clip bg-brincando-salvia-clara/55 py-20 sm:py-24"
     >
       <DoodleField
         items={[
@@ -85,25 +160,7 @@ export function Espaco() {
           </p>
         </SectionReveal>
 
-        <div className="snap-scroller mt-10 flex snap-x snap-mandatory gap-4 overflow-x-auto pb-4 lg:grid lg:grid-cols-3 lg:overflow-visible">
-          {photos.map((photo) => (
-            <div
-              key={photo.slot}
-              className="w-[min(78vw,19.5rem)] shrink-0 snap-start lg:w-auto"
-            >
-              {/* {photo.slot} */}
-              <ImagePlaceholder
-                slot={photo.slot}
-                src={photo.src}
-                note="Foto do espaço físico, fornecida pela cliente."
-                caption={photo.caption}
-                alt={photo.alt}
-                aspect={photo.aspect}
-                objectPosition={photo.objectPosition}
-              />
-            </div>
-          ))}
-        </div>
+        <PhotoClothesline photos={photos} />
 
         <SectionReveal className="mt-14 grid items-start gap-8 lg:grid-cols-2">
           <div>

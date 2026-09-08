@@ -23,7 +23,7 @@ export const FAQ_ITEMS = [
   {
     question: 'Qual a diferença para uma escola tradicional?',
     answer:
-      'Na Brincando em Casa, o brincar livre, o contato com a natureza e o ritmo da rotina têm o mesmo peso pedagógico que as atividades "de mesa", porque é assim que a criança pequena aprende de verdade.',
+      'No Brincando em Casa as aprendizagens acontecem a partir das experiências e da arte. A criança aprende explorando todos os sentidos.',
   },
   {
     question: 'Como funcionam os valores da mensalidade?',

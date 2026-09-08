@@ -32,7 +32,7 @@ const cards: Array<{
   {
     icon: 'natureza',
     title: 'Contato com a Natureza',
-    text: 'Pés na terra, mãos na areia, olhos no céu. Em plena Manaus, cultivamos um quintal onde a natureza faz parte do dia a dia, não é só um passeio.',
+    text: 'Pés na terra, mãos na areia, olhos no céu. Em plena Manaus, a gente traz elementos da nossa região para o quintal. A natureza daqui é o principal laboratório.',
     slot: 'IMG_PROPOSTA_02',
     src: '/proposta/contato-natureza.png',
     alt: 'Criança brincando na areia do quintal da Brincando em Casa',
@@ -60,7 +60,7 @@ const cards: Array<{
   {
     icon: 'cuidado',
     title: 'Cuidado Individual',
-    text: 'Turmas pequenas e educadores formados em Pedagogia Waldorf, que enxergam cada criança no seu próprio tempo, não numa média.',
+    text: 'Turmas pequenas e educadores capacitados, que enxergam cada criança no seu próprio tempo, não numa média.',
     slot: 'IMG_PROPOSTA_04',
     src: '/proposta/cuidado-individual.png',
     alt: 'Educadoras e crianças reunidas à mesa na Brincando em Casa',
@@ -142,11 +142,13 @@ export function Proposta() {
           <p className="font-hand text-2xl text-brincando-laranja">Nossa proposta</p>
           <h2 className="mt-2 text-[1.7rem] sm:text-4xl">O que a gente vive todos os dias</h2>
           <p className="mt-5 text-brincando-terra">
-            Na Brincando em Casa, a gente acredita que criança não precisa de
-            pressa. Precisa de tempo, de terra debaixo dos pés e de adultos por
-            perto que confiam no seu jeito de aprender. É isso que a Pedagogia
-            Waldorf nos ensina. E é isso que a gente vive todos os dias com os
-            pequenos.
+            No Brincando em Casa, criança não precisa de pressa. Precisa de
+            tempo, de terra debaixo dos pés e de adultos que confiam no seu
+            jeito de aprender. A Pedagogia Waldorf nos ensina isso, e a gente
+            vive a partir do nosso contexto: a natureza e a riqueza cultural da
+            região, as lendas, as narrativas indígenas, o ciclo da chuva, a
+            cheia e a seca do rio. Assim a criança, chegando no mundo, se
+            conhece e reconhece o lugar que habita.
           </p>
         </SectionReveal>
 

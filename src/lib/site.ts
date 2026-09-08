@@ -1,7 +1,7 @@
 export const SITE = {
   name: 'Brincando em Casa, Espaço Educativo',
   shortName: 'Brincando em Casa',
-  tagline: 'Um lugar onde a infância tem tempo para acontecer',
+  tagline: 'Onde a infância tem tempo e espaço para acontecer',
   description:
     'Espaço Educativo em Manaus com práticas inspiradas na Pedagogia Waldorf. Onde brincar, criar e descobrir o mundo são, antes de tudo, coisas sérias.',
   instagram: 'https://www.instagram.com/brincandoemcasaa/',

@@ -20,7 +20,7 @@ const momentos: Array<{
   },
   {
     icon: 'roda',
-    title: 'Roda e Histórias',
+    title: 'Rodas e Histórias',
     text: 'Momento de reunir, cantar e ouvir contos.',
   },
   {
@@ -29,9 +29,9 @@ const momentos: Array<{
     text: 'Pausa com alimentação saudável e cheia de cuidado.',
   },
   {
-    icon: 'arlivre',
-    title: 'Ar Livre',
-    text: 'Quintal, natureza e movimento em liberdade.',
+    icon: 'ritmo',
+    title: 'Hora da atividade',
+    text: 'Pintura, modelagem ou um fazer com as mãos, guiado pela proposta do dia.',
   },
 ]
 
@@ -50,7 +50,7 @@ export function Cotidiano() {
       <div className="container-page">
         <SectionReveal className="mx-auto max-w-2xl text-center">
           <p className="font-hand text-2xl text-brincando-laranja">Cotidiano</p>
-          <h2 className="mt-2 text-[1.7rem] sm:text-4xl">Um dia na Brincando em Casa</h2>
+          <h2 className="mt-2 text-[1.7rem] sm:text-4xl">Um dia no Brincando em Casa</h2>
           <p className="mt-5 text-brincando-terra">
             Nossos dias seguem um ritmo gostoso de reconhecer. É esse ritmo
             que dá à criança a segurança para se soltar.
