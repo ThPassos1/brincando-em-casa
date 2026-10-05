@@ -28,9 +28,13 @@ export function Privacidade() {
           visitou esta página.
         </p>
         <p className="mt-3 text-brincando-terra">
-          Anúncios (Meta Pixel ou Google Ads) só entram no site depois de
-          configurados de forma explícita. Enquanto isso não acontecer, o
-          site não dispara esses rastreadores.
+          Usamos o Pixel da Meta para saber quantas pessoas chegam ao site
+          pelos nossos anúncios no Facebook e no Instagram. Ele registra a
+          visita à página e o clique para falar no WhatsApp, e pode usar
+          cookies da Meta, que trata esses dados
+          sob a política de privacidade dela. Você pode ajustar seus anúncios
+          nas configurações da sua conta Meta ou bloquear cookies de
+          terceiros no navegador.
         </p>
         <h2 className="mt-10 text-2xl">Para que usamos</h2>
         <p className="mt-3 text-brincando-terra">

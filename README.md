@@ -1,6 +1,6 @@
 # Brincando em Casa
 
-Landing page de conversão para a [Brincando em Casa](https://brincandoemcasa.com.br), espaço educativo em Manaus com práticas inspiradas na Pedagogia Waldorf. O objetivo é receber o tráfego de anúncios (Meta e Google) e levar a família até o WhatsApp para agendar uma visita.
+Landing page de conversão para a [Brincando em Casa](https://brincandoemcasa.com), espaço educativo em Manaus com práticas inspiradas na Pedagogia Waldorf. O objetivo é receber o tráfego de anúncios (Meta e Google) e levar a família até o WhatsApp para agendar uma visita.
 
 **Live:** [brincando-em-casa.vercel.app](https://brincando-em-casa.vercel.app)
 
@@ -43,7 +43,7 @@ npm run preview
 
 WhatsApp: `wa.me/5592985779009`. As mensagens por origem ficam em `src/lib/whatsapp.ts`. Dados públicos do espaço (endereço, horário, Instagram) em `src/lib/site.ts`.
 
-Tracking de anúncios (Meta Pixel / Google Ads) só entra com IDs reais e atualização do CSP. Não há cadastro nem backend: o site é estático.
+O Meta Pixel (`1976739813019596`) está no `<head>` do `index.html` e dispara `PageView`. Cliques em qualquer link `wa.me` disparam `Contact` (`src/lib/metaPixel.ts`). Os domínios da Meta estão liberados no CSP de `vite.config.ts`, `vercel.json`, `netlify.toml` e `public/_headers`; qualquer novo rastreador (Google Ads, por exemplo) precisa do mesmo cuidado. Não há cadastro nem backend: o site é estático.
 
 ## Licença
 

@@ -1,7 +1,7 @@
 import { FAQ_ITEMS } from '@/lib/faq'
 import { SITE } from '@/lib/site'
 
-export const SITE_URL = 'https://brincandoemcasa.com.br'
+export const SITE_URL = 'https://brincandoemcasa.com'
 export const OG_IMAGE = `${SITE_URL}/og-image.jpg`
 export const LOGO_URL = `${SITE_URL}/logo-brincando-em-casa.png`
 

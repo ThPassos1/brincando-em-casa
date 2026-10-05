@@ -4,4 +4,4 @@ Allow: /
 User-agent: Googlebot
 Allow: /
 
-Sitemap: https://brincandoemcasa.com.br/sitemap.xml
+Sitemap: https://brincandoemcasa.com/sitemap.xml

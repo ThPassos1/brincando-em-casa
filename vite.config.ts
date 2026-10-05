@@ -4,7 +4,7 @@ import path from 'node:path'
 import { defineConfig, type Plugin } from 'vite'
 
 const CSP =
-  "default-src 'self'; base-uri 'self'; form-action 'self'; object-src 'none'; frame-ancestors 'none'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; media-src 'self'; frame-src https://www.google.com https://maps.google.com; connect-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests"
+  "default-src 'self'; base-uri 'self'; form-action 'self'; object-src 'none'; frame-ancestors 'none'; script-src 'self' 'unsafe-inline' https://connect.facebook.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://www.facebook.com; media-src 'self'; frame-src https://www.google.com https://maps.google.com; connect-src 'self' https://www.facebook.com https://connect.facebook.net; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests"
 
 const productionHeaders: Record<string, string> = {
   'Content-Security-Policy': CSP,

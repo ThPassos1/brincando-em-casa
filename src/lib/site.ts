@@ -20,7 +20,7 @@ export const SITE = {
     'Rua Marquês da Vila Real da Praia Grande, 466, Flores, Manaus, AM, 69058-100',
   hours: 'Segunda a sexta. Confirme o horário no WhatsApp',
   ages: '1 ano a 3 anos e 11 meses',
-  url: 'https://brincandoemcasa.com.br',
+  url: 'https://brincandoemcasa.com',
 } as const
 
 export function mapsEmbedUrl(): string {

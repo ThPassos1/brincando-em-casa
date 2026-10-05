@@ -29,9 +29,9 @@
     <meta name="geo.placename" content="Flores, Manaus" />
     <meta name="geo.position" content="-3.0574;-59.99518" />
     <meta name="ICBM" content="-3.0574, -59.99518" />
-    <link rel="canonical" href="https://brincandoemcasa.com.br/" />
-    <link rel="alternate" hrefLang="pt-BR" href="https://brincandoemcasa.com.br/" />
-    <link rel="sitemap" type="application/xml" href="https://brincandoemcasa.com.br/sitemap.xml" />
+    <link rel="canonical" href="https://brincandoemcasa.com/" />
+    <link rel="alternate" hrefLang="pt-BR" href="https://brincandoemcasa.com/" />
+    <link rel="sitemap" type="application/xml" href="https://brincandoemcasa.com/sitemap.xml" />
     <link rel="manifest" href="/site.webmanifest" />
 
     <!-- Open Graph -->
@@ -43,9 +43,9 @@
       property="og:description"
       content="Espaço Educativo em Manaus com práticas inspiradas na Pedagogia Waldorf. Creche e educação infantil. Agende uma visita."
     />
-    <meta property="og:url" content="https://brincandoemcasa.com.br/" />
-    <meta property="og:image" content="https://brincandoemcasa.com.br/og-image.jpg" />
-    <meta property="og:image:secure_url" content="https://brincandoemcasa.com.br/og-image.jpg" />
+    <meta property="og:url" content="https://brincandoemcasa.com/" />
+    <meta property="og:image" content="https://brincandoemcasa.com/og-image.jpg" />
+    <meta property="og:image:secure_url" content="https://brincandoemcasa.com/og-image.jpg" />
     <meta property="og:image:type" content="image/jpeg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
@@ -61,7 +61,7 @@
       name="twitter:description"
       content="Onde a infância tem tempo e espaço para acontecer. Manaus/AM."
     />
-    <meta name="twitter:image" content="https://brincandoemcasa.com.br/og-image.jpg" />
+    <meta name="twitter:image" content="https://brincandoemcasa.com/og-image.jpg" />
 
     <link
       rel="preload"
@@ -89,18 +89,30 @@
     />
 
     <!--
-      TRACKING: não ative Meta Pixel nem Google Ads sem (1) IDs reais,
-      (2) aviso na política de privacidade e (3) atualizar o CSP de
-      produção (vite.config.ts, vercel.json, netlify.toml, public/_headers)
-      com os domínios oficiais. Placeholders PIXEL_ID / AW-XXXXXXXXX
-      não devem ir para produção.
+      Novos rastreadores precisam do domínio liberado no CSP de produção
+      (vite.config.ts, vercel.json, netlify.toml, public/_headers) e de
+      aviso na política de privacidade.
     -->
+    <!-- Meta Pixel Code -->
+    <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '1976739813019596');
+      fbq('track', 'PageView');
+    </script>
+    <!-- End Meta Pixel Code -->
 
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": ["EducationalOrganization", "ChildCare", "Preschool"],
-        "@id": "https://brincandoemcasa.com.br/#organizacao",
+        "@id": "https://brincandoemcasa.com/#organizacao",
         "name": "Brincando em Casa, Espaço Educativo",
         "alternateName": [
           "Brincando em Casa",
@@ -109,9 +121,9 @@
         ],
         "keywords": "creche, creche Manaus, escola infantil, educação infantil, maternal, berçário, jardim de infância, espaço educativo, pedagogia Waldorf, escola Waldorf Manaus",
         "description": "Espaço Educativo em Manaus com práticas inspiradas na Pedagogia Waldorf. Onde brincar, criar e descobrir o mundo são, antes de tudo, coisas sérias.",
-        "url": "https://brincandoemcasa.com.br/",
-        "logo": "https://brincandoemcasa.com.br/logo-brincando-em-casa.png",
-        "image": "https://brincandoemcasa.com.br/og-image.jpg",
+        "url": "https://brincandoemcasa.com/",
+        "logo": "https://brincandoemcasa.com/logo-brincando-em-casa.png",
+        "image": "https://brincandoemcasa.com/og-image.jpg",
         "telephone": "+55-92-98577-9009",
         "address": {
           "@type": "PostalAddress",
@@ -152,6 +164,14 @@
     </script>
   </head>
   <body>
+    <noscript
+      ><img
+        height="1"
+        width="1"
+        style="display: none"
+        alt=""
+        src="https://www.facebook.com/tr?id=1976739813019596&ev=PageView&noscript=1"
+    /></noscript>
     <div id="root"></div>
     <noscript>
       <p>Brincando em Casa, Espaço Educativo em Manaus. Práticas inspiradas na Pedagogia Waldorf. Rua Marquês da Vila Real da Praia Grande, 466, Flores, Manaus. WhatsApp (92) 98577-9009.</p>
