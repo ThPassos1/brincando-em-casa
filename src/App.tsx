@@ -1,6 +1,7 @@
 import { lazy, Suspense, useEffect, useState } from 'react'
 import { JsonLd } from '@/components/seo/JsonLd'
 import { Footer } from '@/components/layout/Footer'
+import { FloatingVisitButton } from '@/components/layout/FloatingVisitButton'
 import { Navbar } from '@/components/layout/Navbar'
 import { WhatsAppFloatButton } from '@/components/layout/WhatsAppFloatButton'
 import { Hero } from '@/components/sections/Hero'
@@ -79,6 +80,7 @@ export default function App() {
       )}
       <Footer />
       <WhatsAppFloatButton />
+      {!isPrivacy && <FloatingVisitButton />}
     </>
   )
 }
